@@ -1,3 +1,6 @@
+import React from "react";
+import CartWidget from "./CartWidget";
+
 function NavBar() {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -5,7 +8,7 @@ function NavBar() {
         <a class="navbar-brand" href="#">
           <img
             class="d-block mx-auto mb-4"
-            src="../src/logo.svg"
+            src="../public/imagenes/logo192.png"
             alt="Logo react"
           />
         </a>

@@ -1,9 +1,13 @@
+import ListadoContainer from "./components/ListadoContainer";
 import NavBar from "./components/NavBar";
+import Saludar from "./components/Saludar";
 
 function App() {
+  // function hacerUnAlert() {
+  //   alert("Hola mundo");
+  // }
   return (
     <div>
-      <h1>Golf ToURU</h1>
       <NavBar />
     </div>
   );
