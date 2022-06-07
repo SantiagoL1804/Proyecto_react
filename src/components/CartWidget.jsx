@@ -4,7 +4,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function CartWidget() {
   return (
-    <div class="d-flex flex-row ">
+    <div className="d-flex flex-row ">
       <FontAwesomeIcon icon={faCartShopping} />
       <p>4</p>
     </div>

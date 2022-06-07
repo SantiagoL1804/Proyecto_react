@@ -1,5 +1,4 @@
 import ItemListContainer from "./components/ItemListContainer";
-import ListadoContainer from "./components/ListadoContainer";
 import NavBar from "./components/NavBar";
 import Saludar from "./components/Saludar";
 import "./App.css";
@@ -8,10 +7,12 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <ItemListContainer greeting={"Bienvenido a Golf ToURU"} />
-    </div>
+    <>
+      <div>
+        <NavBar />
+        <ItemListContainer greeting={"Bienvenido a Golf ToURU"} />
+      </div>
+    </>
   );
 }
 
