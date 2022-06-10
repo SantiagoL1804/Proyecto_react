@@ -13,8 +13,8 @@ function NavBar() {
           <Nav.Link href="#home">Inicio</Nav.Link>
           <Nav.Link href="#features">Tienda</Nav.Link>
           <Nav.Link href="#pricing">Contacto</Nav.Link>
-          <CartWidget />
         </Nav>
+        <CartWidget items={4} />
       </Container>
     </Navbar>
   );

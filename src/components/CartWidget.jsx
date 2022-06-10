@@ -2,11 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-export default function CartWidget() {
+export default function CartWidget({ items }) {
   return (
-    <div className="d-flex flex-row ">
+    <div className="d-flex flex-row text-light d-flex align-items: baseline">
       <FontAwesomeIcon icon={faCartShopping} />
-      <p>4</p>
+      <span>{items}</span>
     </div>
   );
 }
