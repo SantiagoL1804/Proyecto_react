@@ -14,7 +14,7 @@ function ItemCount({ initial, stock, onAdd }) {
   };
   return (
     <>
-      <h4 className="m-3">Driver Ping G400</h4>
+      <h4 className="m-3">Driver Taylormade SIM2</h4>
       <div className="d-flex m-3">
         <button onClick={restar} type="button" className="btn btn-success">
           -

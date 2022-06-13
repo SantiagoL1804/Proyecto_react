@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Test from "./components/Test";
 import ItemCount from "./components/ItemCount";
+import TestPromesas from "./components/TestPromesas";
 
 function App() {
   const onAdd = (y) => {
@@ -19,6 +20,7 @@ function App() {
         {/* <Test desde={0} /> */}
         <br />
         <ItemCount initial={1} stock={5} onAdd={onAdd} />
+        {/* <TestPromesas /> */}
       </div>
     </>
   );
