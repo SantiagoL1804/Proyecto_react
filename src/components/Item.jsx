@@ -9,8 +9,6 @@ function Item({ producto }) {
       <Card.Img variant="top" src={imagenURL} />
       <Card.Body>
         <Card.Title>{titulo}</Card.Title>
-        <Card.Text>{descripcion}</Card.Text>
-        <Card.Text style={{ fontWeight: "bold" }}>USD {precio}</Card.Text>
         <Button variant="success">Ver detalle del producto</Button>
       </Card.Body>
     </Card>

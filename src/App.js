@@ -7,6 +7,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Test from "./components/Test";
 import ItemCount from "./components/ItemCount";
 import TestPromesas from "./components/TestPromesas";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
   const onAdd = (y) => {
@@ -21,6 +22,8 @@ function App() {
         <br />
         <ItemCount initial={1} stock={5} onAdd={onAdd} />
         {/* <TestPromesas /> */}
+        <br />
+        <ItemDetailContainer />
       </div>
     </>
   );
