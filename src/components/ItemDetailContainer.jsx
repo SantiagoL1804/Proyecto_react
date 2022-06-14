@@ -1,26 +1,39 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
+import productos from "../../src/productos.json";
 
 function ItemDetailContainer() {
   const [prod, setProd] = useState({});
+  const [prodById, setProdById] = useState([]);
   useEffect(() => {
-    fetch(("productos.json", { method: "GET" }))
-      .then((response) => response.json())
-      .then((data) => {
-        setProd(data);
+    const pedidos = new Promise((res, rej) => {
+      res(productos);
+    });
+    pedidos
+      .then((result) => {
+        setProd(result);
       })
       .catch((e) => {
         console.log(e);
       })
       .finally(() => {
-        //console.log("fin");
+        console.log("fin");
       });
   }, []);
+  console.log(prod);
+  console.log(productos);
+
+  useEffect(() => {
+    if (prod.length > 0) {
+      setProdById(prod.find((prod) => prod.id === 1));
+    }
+  }, [prod]);
+  console.log(prodById);
 
   return (
     <div>
-      <ItemDetail productoDetalle={prod} />{" "}
+      <ItemDetail productoDetalle={prodById} />{" "}
     </div>
   );
 }
