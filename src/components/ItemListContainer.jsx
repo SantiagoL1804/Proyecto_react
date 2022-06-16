@@ -4,48 +4,27 @@ import ItemList from "./ItemList";
 import driver from "../imagenes/driver.jpg";
 import hierro from "../imagenes/hierro.jpg";
 import putter from "../imagenes/putter.jpg";
+import { useParams } from "react-router-dom";
+import productos from "../../src/productos.json";
+import { Link } from "react-router-dom";
 
-export default function ItemListContainer({ greeting }) {
+export default function ItemListContainer({ titulo }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [productos, setProductos] = useState([]);
+  const [prod, setProd] = useState([]);
+  const { categoriaId } = useParams();
 
   useEffect(() => {
-    const productos = new Promise((res, rej) => {
+    const prod = new Promise((res, rej) => {
       setTimeout(() => {
-        res([
-          {
-            id: 1,
-            titulo: "Driver Taylormade",
-            descripcion:
-              "Driver Taylormade MAX2 con vara de grafito stiff y grip Golf Pride",
-            precio: 250,
-            imagenURL: driver,
-          },
-          {
-            id: 2,
-            titulo: "Hierros PING",
-            descripcion:
-              "Hierro PING i500 con vara de acero x-stiff y grip Golf Pride",
-            precio: 600,
-            imagenURL: hierro,
-          },
-          {
-            id: 3,
-            titulo: "Putter Scotty Cameron",
-            descripcion:
-              "Putter Scotty Cameron de 35 pulgadas y cara con forma mallet",
-            precio: 200,
-            imagenURL: putter,
-          },
-        ]);
+        res(productos);
         rej("Hubo un error al cargar los productos");
       }, 2000);
     });
 
-    productos
+    prod
       .then((result) => {
-        setProductos(result);
+        setProd(result);
       })
       .catch((error) => {
         setError(true);
@@ -55,12 +34,14 @@ export default function ItemListContainer({ greeting }) {
       });
   }, []);
 
-  console.log(productos);
+  console.log(prod);
 
   return (
     <>
-      <h1 style={{ textAlign: "center", fontWeight: "bold" }}>{greeting}</h1>
-      <ItemList productos={productos} />
+      <h1 style={{ textAlign: "center", fontWeight: "bold" }}>
+        Nuestros productos
+      </h1>
+      <ItemList productos={prod} />
     </>
   );
 }

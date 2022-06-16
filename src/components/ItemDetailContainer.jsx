@@ -2,10 +2,15 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import productos from "../../src/productos.json";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ItemDetailContainer() {
-  const [prod, setProd] = useState({});
-  const [prodById, setProdById] = useState([]);
+  const { id } = useParams();
+  const [prod, setProd] = useState([]);
+  const [prodById, setProdById] = useState({});
+  const [item, setItem] = useState({});
+
   useEffect(() => {
     const pedidos = new Promise((res, rej) => {
       res(productos);
@@ -24,17 +29,25 @@ function ItemDetailContainer() {
   console.log(prod);
   console.log(productos);
 
+  // useEffect(() => {
+  //   if (prod.length > 0) {
+  //     setProdById(prod.find((prod) => prod.id === 1));
+  //   }
+  // }, [prod]);
+  // console.log(prodById);
+
   useEffect(() => {
     if (prod.length > 0) {
-      setProdById(prod.find((prod) => prod.id === 1));
+      setProdById(prod.find((prod) => prod.id === parseInt(id)));
     }
   }, [prod]);
-  console.log(prodById);
 
   return (
-    <div>
-      <ItemDetail productoDetalle={prodById} />{" "}
-    </div>
+    <>
+      <div>
+        <ItemDetail productoDetalle={prodById} />
+      </div>
+    </>
   );
 }
 

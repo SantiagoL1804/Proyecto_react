@@ -3,6 +3,7 @@
     "id": 1,
     "titulo": "Driver Taylormade",
     "descripcion": "Driver Taylormade MAX2 con vara de grafito stiff y grip Golf Pride",
+    "categoria": "drivers",
     "precio": 250,
     "imagenURL": "/imagenes/driver.jpg"
   },
@@ -10,6 +11,7 @@
     "id": 2,
     "titulo": "Hierros PING",
     "descripcion": "Hierro PING i500 con vara de acero x-stiff y grip Golf Pride",
+    "categoria": "hierros",
     "precio": 600,
     "imagenURL": "/imagenes/hierro.jpg"
   },
@@ -17,6 +19,7 @@
     "id": 3,
     "titulo": "Putter Scotty Cameron",
     "descripcion": "Putter Scotty Cameron de 35 pulgadas y cara con forma mallet",
+    "categoria": "putters",
     "precio": 200,
     "imagenURL": "/imagenes/putter.jpg"
   }
