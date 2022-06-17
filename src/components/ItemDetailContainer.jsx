@@ -9,11 +9,11 @@ function ItemDetailContainer() {
   const { id } = useParams();
   const [prod, setProd] = useState([]);
   const [prodById, setProdById] = useState({});
-  const [item, setItem] = useState({});
 
   useEffect(() => {
     const pedidos = new Promise((res, rej) => {
       res(productos);
+      rej("Hubo un error al cargar el producto");
     });
     pedidos
       .then((result) => {

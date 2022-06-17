@@ -22,5 +22,13 @@
     "categoria": "putters",
     "precio": 200,
     "imagenURL": "/imagenes/putter.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Driver Titleist",
+    "descripcion": "Driver Titleist TSi2 con vara de grafito stiff de 55 gramos y grip Golf Pride",
+    "categoria": "drivers",
+    "precio": 300,
+    "imagenURL": "/imagenes/TSi2-Driver.png"
   }
 ]
